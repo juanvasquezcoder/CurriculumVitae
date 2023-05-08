@@ -1,0 +1,84 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>ChallengeOne</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" class="control-input" required>
+        </div>
+        <div class="form-group">
+          <label id="email-label">Email</label>
+        <input type="email" id="email" placeholder="Enter your Email" class="control-input" required>
+        </div>
+        <div class="form-group">
+          <label id="number-label">Ege(optional)</label>
+        <input type="number" id="number" max="2" min="1" placeholder="Age" class="control-input">
+        </div>
+        <div class="form-group">
+          <label>Which option best describes your current role?</label>
+          <select id="dropdown" name="dropdown" class="control-input">
+              <option id="student">student</option>
+              <option id="ftj">Full time job</option>
+              <option id="ftl">Full time learned</option>
+              <option id="pnts">Prefer not to say</option>
+              <option id="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Would you recommend freeCodeCamp to a friend?</label>
+          <label>
+            <input type="radio" name="recommend" value="definitely">Definitely
+          </label>
+          <label>
+            <input type="radio" name="recommend" value="maybe">Maybe
+          </label>
+          <label>
+            <input type="radio" name="recommend" value="not">Not sure
+          </label>
+        </div>
+        <div class="form-group">
+          <label>What is your favorite feature of freeCodeCamp?</label>
+          <select class="control-input">
+            <option id="sao">Select an option</option>
+            <option id="challenge">Challenges</option>
+            <option id="porject">Projects</option>
+            <option id="community">Community</option>
+            <option id="os">Open Source</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>What would you like to see improved? (checkall that apply)</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Front-end Projects</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Back-end Projects</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Data Visualization</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Challenges</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Open Source Community</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Gitter help rooms</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Videos</label>
+          <label><input type="checkbox" name="survey-form" value="hola">City Meetups</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Wiki</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Forum</label>
+          <label><input type="checkbox" name="survey-form" value="hola">Additional Courses</label>
+        </div>
+        <div class="form-group">
+          <label>Any comments or suggestions?</label>
+          <textarea></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" id="submit">
+        </div>
+      </form>
+    </main>
+    <script src="../../../javascript/header.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

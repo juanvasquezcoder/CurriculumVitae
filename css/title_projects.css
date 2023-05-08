@@ -1,0 +1,18 @@
+.project-one:hover::before{
+    content: 'JAVA';
+}
+.project-two:hover::before{
+    content: 'E-commerce';
+}
+.project-three:hover::before{
+    content: 'Snake';
+}
+.project-four:hover::before{
+    content: 'Curso de youtube JavaScript "SoyDalto"';
+}
+.project-five:hover::before{
+    content: 'FreeCodeCamp.org';
+}
+/* .portfolio_img:hover::before{
+    content: 'JAVA';
+} */

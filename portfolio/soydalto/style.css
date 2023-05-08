@@ -1,0 +1,116 @@
+@import '../../css/header.css';
+:root{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+    --shadow-border: rgba(255, 255, 255, 0.15);
+    --bg-transparent: rgba(255, 255, 255, 0.4);
+    --bg-blue-transparent: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7))
+
+}
+body.light{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --shadow-border: rgba(48, 46, 77, 0.15);
+    --bg-transparent: rgba(48, 46, 77, 0.4);
+}
+*{
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ol{
+    margin: 20px 40px;
+}
+ol ul{
+    margin: 20px 0;
+}
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 20px 0px;
+    min-height: 100vh;
+    background: var(--bg-blue-transparent);
+}
+.capitulos{
+    width: 100%;
+    max-width: 800px;
+    min-width: 330px;
+    padding: 10px 20px;
+    border: 2px solid var(--text-black-900);
+    margin-top: 20px;
+    color: var(--text-black-900)
+}
+.capitulos:last-child{
+    margin-bottom: 30px
+}
+.capitulos h3{
+    font: 900 28px normal;
+}
+.first{
+    list-style: upper-latin;
+}
+a{
+    color: var(--text-black-900);
+    text-decoration: none;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+input{
+    border: none;
+    border-bottom: 2px solid var(--bg-black-50);
+    background: transparent;
+    margin: auto;
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--text-black-900);
+}
+input:focus{
+    background: rgba(126, 126, 126, .1);
+    color: var(--text-black-900);
+}
+input[type="submit"]{
+    width: 50%;
+    margin: 20px auto;
+    background: var(--text-black-900);
+    color: var(--bg-black-900);
+    cursor: pointer;
+    font: 900 15px sans-serif;
+    border: 2px solid var(--bg-black-50);
+}
+input::placeholder{
+    color: var(--text-black-700);
+}
+form h1{
+    color: var(--text-black-900)
+}
+button{
+    background-color: var(--bg-black-50);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+button:active{
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.35), inset 2px 2px 3px rgba(0, 0, 0, 0.35);
+}
+.btn-modifi{
+    margin-top: 15px;
+}

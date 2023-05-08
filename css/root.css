@@ -1,0 +1,27 @@
+@import './header.css';
+@import './style-color.css';
+@import './skins/color-1.css';
+:root{
+    --color-bg-body: rgb(20, 20, 20);
+    --color-bg-second: rgb(34, 34, 34);
+    --color-bg-third: rgb(57, 57, 57);
+    --color-text-main: rgb(243, 243, 243);
+    --color-boxshadow: rgba(243, 243, 243, .3);
+
+    --color-white: rgb(255, 255, 255);
+    --color-white-text-principal: rgb(233, 233, 233);
+    --color-white-editor-pick: rgba(255, 255, 255, 0.4);
+    --skin-color: #37b182;
+}
+body.light{
+    --color-bg-body: rgb(221, 221, 221);
+    --color-bg-second: rgb(235, 235, 235);
+    --color-bg-third: rgb(198, 198, 198);
+    --color-text-main: rgb(12, 12, 12);
+    --color-boxshadow: rgba(12, 12, 12, .3);
+
+    --color-white: rgb(0, 0, 0);
+    --color-white-text-principal: rgb(22, 22, 22);
+    --color-white-editor-pick: rgba(0, 0, 0, 0.5);
+    --skin-color: #37b182;
+}

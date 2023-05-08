@@ -1,0 +1,27 @@
+@import '../../../css/root.css';
+body{
+    background: var(--color-bg-body);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 100vh;
+    margin: 100px auto 0px;
+}
+.btn-links{
+    border-radius: 25px;
+    border: 5px solid var(--skin-color);
+    height: 200px;
+    width: 300px;
+}
+.btn-links:hover{
+    transform: scale(1.05);
+}
+img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
