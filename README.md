@@ -3,6 +3,7 @@
 Curriculum Vitae
 Portfolio
 here I show all the skills I have acquired to develop web pages, all with HTML5, CSS3, and JavaScript.
+
 ---Español---
 Hoja de vida
 Portafolio
