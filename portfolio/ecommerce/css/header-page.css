@@ -1,0 +1,68 @@
+@import '../../../css/root.css';
+body{
+    background: var(--color-bg-body);
+}
+*{
+    color: var(--color-text-main);
+}
+.header-page{
+    max-width: 1300px;
+    text-align: center;
+    margin: 70px auto 0px;
+    transition: all 0.3s ease;
+    padding: 20px 0px;
+}
+.log{
+    letter-spacing: 5px;
+    font: 500 50px 'Poppins';
+}
+.header-page nav, .header-page nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font: 100 20px normal;
+    border-radius: 20px;
+}
+.header-page nav{
+    margin-top: 20px;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+.header-page nav a{
+    width: 140px;
+    height: 40px;
+    min-width: 120px;
+    background: var(--color-bg-second);
+}
+.header-page nav a:hover{
+    background: var(--color-bg-third)
+}
+.search{
+    display: flex;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 20px auto 0px;
+    padding: 0px 30px;
+}
+input[type='search'], .btn-search{
+    height: 35px;
+}
+input[type=search]{
+    width: 85%;
+    padding-left: 15px;
+    color: #000;
+    border-radius: 20px 0px 0px 20px;
+    border: none;
+    outline: none;
+}
+.btn-search{
+    padding: 7px 0px;
+    font-size: 20px;
+    width: 15%;
+    border-radius: 0px 20px 20px 0px;
+    background: var(--color-bg-second);
+}
+.btn-search:hover{
+    background: var(--color-bg-third);
+}

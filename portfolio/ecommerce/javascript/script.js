@@ -4,7 +4,7 @@ const products = [
         title: 'glases 1',
         image: './images/cardImagen1.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
@@ -14,7 +14,7 @@ const products = [
         title: 'glases 2',
         image: './images/cardImagen2.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
@@ -24,7 +24,7 @@ const products = [
         title: 'glases 3',
         image: './images/cardImagen3.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
@@ -34,7 +34,7 @@ const products = [
         title: 'glases 4',
         image: './images/cardImagen4.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
@@ -44,7 +44,7 @@ const products = [
         title: 'glases 5',
         image: './images/cardImagen5.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
@@ -54,13 +54,37 @@ const products = [
         title: 'glases 6',
         image: './images/cardImagen6.jpg',
         categoria: {
-            nombre: 'glasses',
+            name: 'glasses',
             id: 'glasses'
         },
         price: 100000
     }
 ];
+const imagenes = [
+    './images/slider1.jpg',
+    './images/slider2.jpg',
+    './images/slider3.jpg',
+    './images/slider4.jpg'
+];
+let counter = 0;
+document.Imagen.src = imagenes[0];
+document.querySelector('.fa-circle-arrow-right').addEventListener('click', () => {
+    counter++;
+    if(counter > imagenes.length - 1){
+        counter = 0;
+    }
+    document.Imagen.src = imagenes[counter];
+});
+document.querySelector('.fa-circle-arrow-left').addEventListener('click', () => {
+    counter--;
+    if(counter < 0){
+        counter = imagenes.length - 1;
+    }
+    document.Imagen.src = imagenes[counter];
+});
 const containerProducts = document.querySelector('#products');
+const number = document.querySelector('#number')
+let addButtons = document.querySelectorAll('.add-product');
 function loadProducts () {
     products.forEach(products => {
         const div = document.createElement('div');
@@ -71,9 +95,41 @@ function loadProducts () {
                 <h3>${products.title}</h3>
                 <p>${products.price}</p>
                 <span>description</span>
-                <button class="add-product" ${products.id}>ADD</button>
-            </div>`;
+                <button class="add-product" id="${products.id}">ADD</button>
+                </div>`;
         containerProducts.append(div);
-    })
+    });
+    updateAddButtons();
+}
+function updateAddButtons () {
+    addButtons = document.querySelectorAll('.add-product');
+    addButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+}
+let productsInCart;
+let productsInCartLS = localStorage.getItem('products-in-cart');
+if(productsInCartLS){
+    productsInCart = JSON.parse(productsInCartLS);
+    updateNumber();
+} else {
+    productsInCart = [];
+}
+function addToCart (e) {
+    const idButton = e.currentTarget.id;
+    const bundledProduct = products.find(product => product.id === idButton);
+    if(productsInCart.some(product => product.id === idButton)){
+        const index = productsInCart.findIndex(product => product.id === idButton);
+        productsInCart[index].quantity++;
+    } else {
+        bundledProduct.quantity = 1;
+        productsInCart.push(bundledProduct);
+    }
+    updateNumber();
+    localStorage.setItem("products-in-cart", JSON.stringify(productsInCart));
+}
+function updateNumber () {
+    let numberNew = productsInCart.reduce((acc, product) => acc + product.quantity, 0);
+    number.innerText = numberNew;
 }
 document.addEventListener('DOMContentLoaded', loadProducts, false);

@@ -1,83 +1,37 @@
-@import '../../../css/root.css';
+@import './header-page.css';
 body{
     background: var(--color-bg-body);
 }
 *{
     color: var(--color-text-main);
 }
-.header-page{
-    max-width: 1300px;
-    text-align: center;
-    margin: 70px auto 0px;
-    transition: all 0.3s ease;
-    padding: 20px 0px;
-}
-.log{
-    letter-spacing: 5px;
-    font: 500 50px 'Poppins';
-}
-.header-page nav, .header-page nav a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    font: 100 20px normal;
-    border-radius: 20px;
-}
-.header-page nav{
-    margin-top: 20px;
-    padding: 0px 20px;
-    flex-wrap: wrap;
-}
-.header-page nav a{
-    width: 120px;
-    height: 40px;
-    min-width: 120px;
-    background: var(--color-bg-second);
-    flex-wrap: wrap;
-}
-.header-page nav a:hover{
-    background: var(--color-bg-third)
-}
-.search{
-    display: flex;
-    width: 300px;
-    margin: 20px auto 0px;
-}
-input[type='search'], .btn-search{
-    height: 35px;
-}
-input[type=search]{
-    width: 85%;
-    padding-left: 10px;
-    color: #000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border: none;
-    outline: none;
-}
-.btn-search{
-    padding: 7px 0px;
-    font-size: 20px;
-    width: 15%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: var(--color-bg-second);
-}
-.btn-search:hover{
-    background: var(--color-bg-third);
-}
 main{
     max-width: 1100px;
     margin: 20px auto;
+    padding: 0px 30px;
 }
 .slider-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.slider-izquierdo, .slider-derecho{
+    position: relative;
+}
+.slider-izquierdo i, .slider-derecho i{
+    font-size: 40px;
+}
+.slider-izquierdo i:hover, .slider-derecho i:hover{
+    transform: scale(1.1)
 }
 .slider-item{
     width: 100%;
     height: 300px;
+    padding: 0px 5px;
     position: relative;
+    border-radius: 20px;
+    
 }
 .slider-item img, .slider-item p{
     width: 100%;
@@ -85,14 +39,22 @@ main{
 }
 .slider-item img{
     object-fit: cover;
+    border-radius: 20px;
 }
 .slider-item p{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     inset: 0px;
     position: absolute;
-    font: 500 20px 'Poppins';
+    font: 500 3rem 'Poppins';
+    color: var(--color-bg-body);
+    text-shadow: 2px 2px 5px var(--skin-color);
+}
+.slider-item p:before{
+    width: 100%;
+    height: 100%;
 }
 .products-cards{
     display: flex;
@@ -102,11 +64,7 @@ main{
 }
 .card{
     flex: 1;
-    min-width: 300px;
-    cursor: pointer;
-}
-.card:hover{
-    transform: scale(1.02);
+    min-width: 250px;
 }
 .card img{
     width: 100%;
@@ -141,11 +99,15 @@ main{
     border-radius: 20px;
     color: var(--color-white);
     background: var(--color-bg-third);
-    cursor: pointer;
     font: 900 20px normal;
+    cursor: pointer;
+}
+.characteristics button:hover{
+    background: var(--color-bg-fourth);
 }
 .editors-pick{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     max-width: 1300px;
 }
@@ -154,6 +116,7 @@ main{
 }
 .editor-pick{
     flex: 1;
+    min-width: 300px;
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -163,7 +126,7 @@ main{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--color-white-editor-pick);
+    background: rgba(255, 255, 255, 0.4);
 }
 .editor-pick img{
     width: 100%;
@@ -188,14 +151,14 @@ main{
     text-align: center;
     width: 250px;
     height: 250px;
-    color: var(--color-bg-third);
+    color: rgba(0, 0, 0, 0.9);
     padding: 0px 65px 55px 20px;
     border: 1px solid var(--color-white);
     border-radius: 50%;
     position: absolute;
     inset: auto -205px -205px auto;
     font: 900 16px 'Poppins';
-    background: var(--color-white-editor-pick);
+    background: rgba(255, 255, 255, 0.4);;
     transition: all 0.8s ease;
 }
 .editor-pick:hover .circle-editor{
