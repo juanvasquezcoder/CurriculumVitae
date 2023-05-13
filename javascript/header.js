@@ -15,7 +15,7 @@ function headerCV () {
     nav.classList.add("nav-header")
     const fragmentoNav = document.createDocumentFragment();
     // lista
-    const link  = ["Home", "About", "Service", "Portfolio", "Contact"];
+    const link  = ["Home", "About", "Portfolio", "Contact"];
     for(let i = 0; i < link.length; i++) {
         let li = document.createElement("LI");
         let a = link[i].toLowerCase();
@@ -70,7 +70,7 @@ function headerEcommerce () {
     nav.classList.add("nav-header")
     const fragmentoNav = document.createDocumentFragment();
     // lista
-    const link  = ["Home", "About", "Service", "Portfolio", "Contact"];
+    const link  = ["Home", "About", "Portfolio", "Contact"];
     for(let i = 0; i < link.length; i++) {
         let li = document.createElement("LI");
         let a = link[i].toLowerCase();
@@ -128,7 +128,7 @@ function headerProjects () {
     nav.classList.add("nav-header")
     const fragmentoNav = document.createDocumentFragment();
     // lista
-    const link  = ["Home", "About", "Service", "Portfolio", "Contact"];
+    const link  = ["Home", "About", "Portfolio", "Contact"];
     for(let i = 0; i < link.length; i++) {
         let li = document.createElement("LI");
         let a = link[i].toLowerCase();
