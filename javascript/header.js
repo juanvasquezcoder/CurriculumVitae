@@ -8,7 +8,7 @@ function headerCV () {
     // primer elemento
     const logo = document.createElement("div");
     logo.classList.add("logo-header");
-    logo.innerHTML = `<a href='../../index.html'><span>C</span>urriculum <span>V</span>itae</a>`;
+    logo.innerHTML = `<a href='./index.html'><span>C</span>urriculum <span>V</span>itae</a>`;
     fragmentoHeader.appendChild(logo);
     // segundo elemento
     const nav = document.createElement("nav");
