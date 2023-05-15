@@ -8,7 +8,7 @@ function headerCV () {
     // primer elemento
     const logo = document.createElement("div");
     logo.classList.add("logo-header");
-    logo.innerHTML = `<a href='../../index.html'><span>C</span>urriculum <span>V</span>itae</a>`;
+    logo.innerHTML = `<a href='./index.html'><span>C</span>urriculum <span>V</span>itae</a>`;
     fragmentoHeader.appendChild(logo);
     // segundo elemento
     const nav = document.createElement("nav");
@@ -20,7 +20,7 @@ function headerCV () {
         let li = document.createElement("LI");
         let a = link[i].toLowerCase();
         li.classList.add(a);
-        li.innerHTML = `<a href='../../index.html#${a}' class='list-links'>${link[i]}</a>`;
+        li.innerHTML = `<a href='./index.html#${a}' class='list-links'>${link[i]}</a>`;
         fragmentoNav.appendChild(li);
     }
     nav.appendChild(fragmentoNav);
